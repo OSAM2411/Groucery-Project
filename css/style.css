@@ -232,11 +232,16 @@ section p {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 45px;
+}
+.available h1 span {
+  margin-left: 15px;
+  color: #627e17;
 }
 .av_box {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  flex-wrap: wrap;
+  width: 95%;
   gap: 10px;
 }
 .av_card {
@@ -249,10 +254,17 @@ section p {
 .av_image {
   height: 250px;
   width: 250px;
+  overflow: hidden;
 }
 .av_image img {
-  overflow: hidden;
   width: 100%;
+  height: 100%;
+  object-fit: fill;
+  padding: 10px;
+  transition: 0.3s;
+}
+.av_image:hover img {
+  transform: scale(1.1);
 }
 
 .av_info {
@@ -261,7 +273,7 @@ section p {
 .av_info h2 {
   font-size: 30px;
   margin: 10px 0px;
-  color: #081409;
+  color: #27960b;
 }
 .av_info p {
   line-height: 25px;
@@ -277,9 +289,204 @@ section p {
   font-size: 21px;
   margin-bottom: 8px;
 }
-.av_info a {
-  width: 100%;
+.av_btn {
   border-radius: 30px 130px 30px;
-  padding: 8px;
+  background: #95c415;
+  padding: 7px 50px;
+  transition: 0.3s;
+}
+.av_btn:hover {
   background: #27960b;
+  padding: 7px 80px;
+}
+.av_info a {
+  color: #013b09;
+  font-size: 20px;
+}
+/* =====================================gallary===============================================*/
+
+.galary {
+  width: 100%;
+}
+.galary h1 {
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 45px;
+}
+
+.galary h1 span {
+  color: #627e17;
+  margin-left: 15px;
+}
+.galary .image {
+  margin-left: 23px;
+  width: 23%;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+/*=============================order  design =========================================*/
+
+.order {
+  width: 100%;
+  height: 100vh;
+  padding: 70px 0px;
+}
+
+.order h1 {
+  margin: 30px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 45px;
+}
+
+.order h1 span {
+  color: #627e17;
+  margin-left: 15px;
+}
+
+.order-main {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.order-image img {
+  width: 600px;
+}
+
+.order .order-main form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 15px;
+  column-gap: 10px;
+}
+.input p {
+  line-height: 25px;
+  font-size: 18px;
+  margin-left: 20px;
+  color: #627e17;
+
+  font-weight: 700;
+}
+.input input {
+  width: 300px;
+  height: 35px;
+  color: #081409;
+  font-weight: 700;
+  border-radius: 30px 0px 30px;
+  padding-left: 8px;
+  padding-right: 5px;
+  background: #a0da7e;
+  border: 1px solid #49b808;
+  outline: none;
+}
+.input input:focus {
+  background: #82bb61;
+}
+
+.order-de {
+  background: #a0da7e;
+
+  padding: 7px;
+  text-align: center;
+  margin-top: 20px;
+  border-radius: 30px 0px 30px;
+  text-decoration: none;
+  transition: 0.3s;
+  font-weight: 700;
+  width: 50%;
+}
+.order-de a {
+  color: #013b09;
+}
+.order-de:hover {
+  background: #27960b;
+  width: 75%;
+}
+
+.order-de:hover i {
+  transform: translateX(10px);
+  color: #d86666;
+}
+/*=============================Contact US Design =========================================*/
+.contact {
+  width: 100vw;
+  height: 100vh;
+  padding: 70px 0px;
+}
+
+.contact h1 {
+  margin: 30px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 45px;
+}
+.contact h1 span {
+  color: #627e17;
+  margin-left: 15px;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid;
+}
+.container::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+
+  filter: blur(50px);
+  z-index: -1;
+}
+
+.contact-box {
+  max-width: 850px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: #627e17;
+  box-shadow: 0px 0px 19px 5px rgba(0, 0, 0, 0);
+  border-radius: 50px 5px 50px;
+}
+.left {
+  height: 100%;
+}
+.right {
+  padding: 25px 40px;
+}
+.field {
+  width: 100%;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  margin-bottom: 5px;
+  outline: none;
+  border-radius: 30px 0px 30px;
+  padding-left: 20px;
+  font-size: 1.1rem;
+  transition: 0.3s;
+  background: #a0da7e;
+  color: #081409;
+}
+.field:hover {
+  background: #82bb61;
 }
